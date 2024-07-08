@@ -2,8 +2,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Core.Requests.Categories;
 
-//Flunt
-//FluntValidation
 public sealed class Create : Request 
 {
     [Required(ErrorMessage = "Título inválido")]
