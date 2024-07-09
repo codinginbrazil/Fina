@@ -3,19 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{F8DC4A32-296B-45B8-945C-8E2820E3E002}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{F8DC4A32-296B-45B8-945C-8E2820E3E002}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{ED874851-F3AA-44A7-8CB8-C6BBDA205344}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{ED874851-F3AA-44A7-8CB8-C6BBDA205344}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{0F1F87C6-0442-4AC2-8307-ED8F1AA10BB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "Web\Web.csproj", "{0F1F87C6-0442-4AC2-8307-ED8F1AA10BB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "..\tests\UnitTests\UnitTests.csproj", "{C7D1EE78-519B-4B6D-BD3C-46C18D488DED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F8DC4A32-296B-45B8-945C-8E2820E3E002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,5 +29,15 @@ Global
 		{0F1F87C6-0442-4AC2-8307-ED8F1AA10BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F1F87C6-0442-4AC2-8307-ED8F1AA10BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F1F87C6-0442-4AC2-8307-ED8F1AA10BB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7D1EE78-519B-4B6D-BD3C-46C18D488DED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7D1EE78-519B-4B6D-BD3C-46C18D488DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7D1EE78-519B-4B6D-BD3C-46C18D488DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7D1EE78-519B-4B6D-BD3C-46C18D488DED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92E1B357-5DA1-4144-8BE5-0D7F4353DB0C}
 	EndGlobalSection
 EndGlobal
