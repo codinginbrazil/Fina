@@ -1,6 +1,4 @@
-using Core.Models;
 using Core.Requests.Categories;
-using Core.Responses;
 
 namespace Core.Handlers;
 
