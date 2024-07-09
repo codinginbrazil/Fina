@@ -8,7 +8,7 @@ public sealed class Update : Request
     public decimal Amount { get; set; }
 
     [Required(ErrorMessage = "Categoria inválida")]
-    public long Categoryld { get; set; }
+    public long CategoryId { get; set; }
 
     [Required(ErrorMessage = "Data inválido")]
     public DateTime? PaidOrReceivedAt { get; set; }
