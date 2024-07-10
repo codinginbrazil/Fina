@@ -1,7 +1,6 @@
 namespace Core.Requests;
 
-public abstract class RequestWithId
+public abstract class RequestWithId : Request
 {
-    public string UserId { get; set; } = string.Empty;
     public long Id { get; set; }
 }

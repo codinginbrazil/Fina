@@ -3,5 +3,5 @@
 public sealed class Category : Model
 {
     public string? Description { get; set; } 
-    public string Userld { get; set; } =  string.Empty;
+    public string UserId { get; set; } =  string.Empty;
 }

@@ -1,7 +1,7 @@
 namespace Core.Enums;
 
-public enum ETransctionType
+public enum ETransactionType
 {
-    Desposit = 1,
+    Deposit = 1,
     Withdraw = 2
 }

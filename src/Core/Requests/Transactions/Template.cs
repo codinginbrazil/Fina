@@ -10,6 +10,6 @@ public abstract class Template : Request
     [Required(ErrorMessage = "Categoria inválida")]
     public long CategoryId { get; set; }
 
-    [Required(ErrorMessage = "Data inválido")]
+    [Required(ErrorMessage = "Data inválida")]
     public DateTime? PaidOrReceivedAt { get; set; }
 }

@@ -5,16 +5,34 @@ namespace UnitTests.Models;
 public class CategoryTests
 {
     [Fact]
-    public void Category_ShouldHaveEmptyUserId_ByDefault()
+    public void Category_ShouldHaveDefaultValues()
     {
         // Arrange
         var category = new Category();
 
         // Act
+        var id = category.Id;
+        var description = category.Description;
         var userId = category.UserId;
 
         // Assert
+        Assert.Equal(0, id); // Assuming default value of long is 0
+        Assert.Null(description);
         Assert.Equal(string.Empty, userId);
+    }
+
+    [Fact]
+    public void Category_ShouldAllowSettingId()
+    {
+        // Arrange
+        var category = new Category();
+        var id = 123L;
+
+        // Act
+        category.Id = id;
+
+        // Assert
+        Assert.Equal(id, category.Id);
     }
 
     [Fact]

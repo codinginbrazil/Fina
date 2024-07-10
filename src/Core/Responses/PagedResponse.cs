@@ -8,7 +8,7 @@ public class PagedResponse<TData> : Response<TData>
 
     public int CurrentPage { get; set; }
 
-    public int PageSize{ get; set; } = Constant.DefaultStatusCode;
+    public int PageSize{ get; set; } = 10;
     public int TotalCount { get; set; }
 
 
