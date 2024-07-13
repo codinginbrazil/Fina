@@ -1,0 +1,16 @@
+CREATE TABLE Category (
+    Id SERIAL PRIMARY KEY,
+    Title VARCHAR(80) NOT NULL,
+    Description VARCHAR(255),
+    UserId VARCHAR(160) NOT NULL
+);
+
+CREATE TABLE Transaction (
+    Id SERIAL PRIMARY KEY,
+    Title VARCHAR(80) NOT NULL,
+    Type SMALLINT NOT NULL,
+    Amount MONEY NOT NULL,
+    CreatedAt TIMESTAMP NOT NULL,
+    PaidOrReceivedAt TIMESTAMP,
+    UserId VARCHAR(160) NOT NULL
+);
