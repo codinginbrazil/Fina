@@ -1,6 +1,6 @@
 using Core.Requests.Categories;
 
-namespace Core.Repositories.Categories;
+namespace Core.Interfaces.Repositories.Categories;
 
 public interface IQueryRepository
 {

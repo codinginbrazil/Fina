@@ -1,5 +1,5 @@
-﻿using Core.Models;
-using Core.Repositories.Transactions;
+﻿using Core.Interfaces.Repositories.Transactions;
+using Core.Models;
 using Core.Requests.Transactions;
 using Core.Responses;
 using Dapper;

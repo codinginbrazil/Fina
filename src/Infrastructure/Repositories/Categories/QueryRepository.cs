@@ -1,5 +1,5 @@
-﻿using Core.Models;
-using Core.Repositories.Categories;
+﻿using Core.Interfaces.Repositories.Categories;
+using Core.Models;
 using Core.Requests.Categories;
 using Core.Responses;
 using Dapper;

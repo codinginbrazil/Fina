@@ -1,6 +1,6 @@
 using Core.Requests.Transactions;
 
-namespace Core.Repositories.Transactions;
+namespace Core.Interfaces.Repositories.Transactions;
 
 public interface IQueryRepository
 {
