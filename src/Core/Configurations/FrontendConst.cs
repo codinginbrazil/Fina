@@ -6,5 +6,3 @@ public sealed class FrontendConst
     public const string Port = "5200";
     public const string Url = Host + ":" + Port;
 }
-dia 03
-34:14

@@ -5,6 +5,9 @@
 To do:
 [health checks](https://renatogroffe.medium.com/net-5-health-checks-exemplos-de-implementa%C3%A7%C3%A3o-em-projetos-asp-net-core-3488cc807608)
 
+Doing: 
+- Dapper
+- Minimal API
 
 ```shell
 #Create a Solution File: To create a solution file, use the following command:

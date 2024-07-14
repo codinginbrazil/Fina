@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Core.Responses;
 
-public abstract class Response<TData>
+public class Response<TData>
 {
     private int _code = Constant.DefaultStatusCode;
 
