@@ -9,6 +9,12 @@ Doing:
 - Dapper
 - Minimal API
 
+Done:
+- CORS
+- [Swagger](https://localhost:7273/swagger/index.html)
+    - Microsoft.OpenApi
+    - Swashbuckle.Aspnet
+
 ```shell
 #Create a Solution File: To create a solution file, use the following command:
 dotnet new sln -n Fina 

@@ -1,4 +1,4 @@
-using Core.Configurations;
+using Core.Configurations.Constants;
 
 namespace Core.Requests;
 

@@ -1,4 +1,4 @@
-using Core.Configurations;
+using Core.Configurations.Constants;
 using System.Text.Json.Serialization;
 
 namespace Core.Responses;

@@ -1,4 +1,4 @@
-namespace Core.Configurations;
+namespace Core.Configurations.Constants;
 
 public static class Constant
 {
@@ -6,5 +6,5 @@ public static class Constant
     public const int DefaultPageNumber = 1;
     public const int DefaultPageSize = 25;
 
-    public const string Host = "localhost";
+    public static string Host { get; set; } = "localhost";
 }

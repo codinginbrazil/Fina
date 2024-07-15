@@ -18,13 +18,13 @@ public static class Endpoint
             //.MapEndpoint<Categories.GetByIdEndpoint>()
             .MapEndpoint<Categories.GetAllEndpoint>();
 
-        //endpoints.MapGroup("v1/transactions")
-        //    .WithTags("Transactions")
-        //    .RequireAuthorization()
+        endpoints.MapGroup("v1/transactions")
+            .WithTags("Transactions")
+            //.RequireAuthorization()
         //    .MapEndpoint<Transactions.CreateEndpoint>()
         //    .MapEndpoint<Transactions.UpdateEndpoint>()
         //    .MapEndpoint<Transactions.DeleteEndpoint>()
-        //    .MapEndpoint<Transactions.GetAllEndpoint>()
+            .MapEndpoint<Transactions.GetAllEndpoint>();
         //    .MapEndpoint<Transactions.GetByIdEndpoint>()
         //    .MapEndpoint<Transactions.GetByPeriodEndpoint>();
     }

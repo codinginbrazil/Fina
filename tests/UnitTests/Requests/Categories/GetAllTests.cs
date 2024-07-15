@@ -1,4 +1,4 @@
-﻿using Core.Configurations;
+﻿using Core.Configurations.Constants;
 using Core.Requests.Categories;
 
 namespace UnitTests.Requests.Categories;
