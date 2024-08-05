@@ -1,6 +1,6 @@
 ﻿using Core.Requests.Categories;
 
-namespace UnitTests.Requests.Categories;
+namespace UnitTests.Core.Requests.Categories;
 
 public class DeleteTests
 {

@@ -1,7 +1,7 @@
-﻿using Core.Enums;
+﻿using Core.Configurations.Enums;
 using Core.Models;
 
-namespace UnitTests.Models;
+namespace UnitTests.Core.Models;
 
 public class TransactionTests
 {

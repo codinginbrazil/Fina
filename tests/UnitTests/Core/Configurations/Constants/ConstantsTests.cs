@@ -1,6 +1,6 @@
 ﻿using Core.Configurations.Constants;
 
-namespace UnitTests.Configurations;
+namespace UnitTests.Core.Configurations.Constants;
 
 public class ConstConfigurationTests
 {

@@ -1,7 +1,7 @@
 ﻿using Core.Requests.Transactions;
 using System.ComponentModel.DataAnnotations;
 
-namespace UnitTests.Requests.Transactions;
+namespace UnitTests.Core.Requests.Transactions;
 
 public class CreateTests
 {
@@ -18,7 +18,7 @@ public class CreateTests
         Assert.Contains(validationResults, v => v.MemberNames.Contains("Amount") && v.ErrorMessage == "Valor inválido");
     }
 
-    [Fact (Skip = "not implemented")]
+    [Fact(Skip = "not implemented")]
     public void CategoryId_ShouldHaveRequiredValidation()
     {
         // Arrange
@@ -44,9 +44,9 @@ public class CreateTests
         Assert.Contains(validationResults, v => v.MemberNames.Contains("PaidOrReceivedAt") && v.ErrorMessage == "Data inválida");
     }
 
-    private static System.Collections.Generic.List<ValidationResult> ValidateModel(object model)
+    private static List<ValidationResult> ValidateModel(object model)
     {
-        var validationResults = new System.Collections.Generic.List<ValidationResult>();
+        var validationResults = new List<ValidationResult>();
         var context = new ValidationContext(model, serviceProvider: null, items: null);
         Validator.TryValidateObject(model, context, validationResults, validateAllProperties: true);
         return validationResults;

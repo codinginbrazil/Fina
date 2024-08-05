@@ -2,7 +2,7 @@
 using Core.Requests.Transactions;
 using System.ComponentModel.DataAnnotations;
 
-namespace UnitTests.Requests.Transactions;
+namespace UnitTests.Core.Requests.Transactions;
 
 public class GetByPeriodTests
 {
@@ -70,15 +70,15 @@ public class GetByPeriodTests
         Assert.True(IsValid(validationResults));
     }
 
-    private static System.Collections.Generic.List<ValidationResult> ValidateModel(object model)
+    private static List<ValidationResult> ValidateModel(object model)
     {
-        var validationResults = new System.Collections.Generic.List<ValidationResult>();
+        var validationResults = new List<ValidationResult>();
         var context = new ValidationContext(model, serviceProvider: null, items: null);
         Validator.TryValidateObject(model, context, validationResults, validateAllProperties: true);
         return validationResults;
     }
 
-    private static bool IsValid(System.Collections.Generic.List<ValidationResult> validationResults)
+    private static bool IsValid(List<ValidationResult> validationResults)
     {
         return validationResults.Count == 0;
     }

@@ -10,23 +10,33 @@ public static class Endpoint
             .WithTags("Health Check")
             .MapGet("/", () => new { message = "OK" });
 
-        endpoints.MapGroup("v1/categories")
+        #region categories
+        endpoints.MapGroup("v1/category")
             .WithTags("Categories")
             //.MapEndpoint<Categories.CreateEndpoint>()
             //.MapEndpoint<Categories.UpdateEndpoint>()
             //.MapEndpoint<Categories.DeleteEndpoint>()
-            //.MapEndpoint<Categories.GetByIdEndpoint>()
+            .MapEndpoint<Categories.GetByIdEndpoint>();
+
+        endpoints.MapGroup("v1/categories")
+            .WithTags("Categories")
             .MapEndpoint<Categories.GetAllEndpoint>();
+        #endregion  categories
+
+        #region transactions
+        endpoints.MapGroup("v1/transaction")
+            .WithTags("Transactions")
+            //.RequireAuthorization()
+            //.MapEndpoint<Transactions.CreateEndpoint>()
+            //.MapEndpoint<Transactions.UpdateEndpoint>()
+            //.MapEndpoint<Transactions.DeleteEndpoint>()
+            .MapEndpoint<Transactions.GetByIdEndpoint>();
+            //.MapEndpoint<Transactions.GetByPeriodEndpoint>();
 
         endpoints.MapGroup("v1/transactions")
             .WithTags("Transactions")
-            //.RequireAuthorization()
-        //    .MapEndpoint<Transactions.CreateEndpoint>()
-        //    .MapEndpoint<Transactions.UpdateEndpoint>()
-        //    .MapEndpoint<Transactions.DeleteEndpoint>()
             .MapEndpoint<Transactions.GetAllEndpoint>();
-        //    .MapEndpoint<Transactions.GetByIdEndpoint>()
-        //    .MapEndpoint<Transactions.GetByPeriodEndpoint>();
+        #endregion transactions
     }
 
     private static IEndpointRouteBuilder MapEndpoint<TEndpoint>(this IEndpointRouteBuilder app) where TEndpoint : IEndpoint

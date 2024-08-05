@@ -1,6 +1,6 @@
 using Core.Models;
 
-namespace UnitTests.Models;
+namespace UnitTests.Core.Models;
 
 public class CategoryTests
 {

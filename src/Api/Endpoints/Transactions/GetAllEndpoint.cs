@@ -1,8 +1,4 @@
-﻿using Core.Interfaces.Repositories.Transactions;
-using Core.Models;
-using Core.Responses;
-
-namespace Api.Endpoints.Transactions;
+﻿namespace Api.Endpoints.Transactions;
 
 public sealed class GetAllEndpoint : IEndpoint
 {
@@ -12,13 +8,13 @@ public sealed class GetAllEndpoint : IEndpoint
             .WithName("Transactions: Get All")
             .WithSummary("Recupera todas as transações")
             .WithDescription("Recupera todas as transações")
-            .WithOrder(5)
-            .Produces<Response<IEnumerable<Transaction>?>>();
+            .WithOrder(1)
+            .Produces<Response<IEnumerable<Transaction>>>();
     }
 
-    private static async Task<IResult> Repository(IQueryRepository queryRepository)
+    private static async Task<IResult> Repository(Core.Interfaces.Repositories.Transactions.IQueryRepository queryRepository)
     {
-        var result = await queryRepository.GetAll();
-        return Results.Ok(result);
+        Response<IEnumerable<Transaction>> response = await queryRepository.GetAll();
+        return CommonResult.Get(response);
     }
 }

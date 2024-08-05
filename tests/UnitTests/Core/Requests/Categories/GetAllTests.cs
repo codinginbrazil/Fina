@@ -1,7 +1,7 @@
 ﻿using Core.Configurations.Constants;
 using Core.Requests.Categories;
 
-namespace UnitTests.Requests.Categories;
+namespace UnitTests.Core.Requests.Categories;
 
 public class GetAllRequestTests
 {
@@ -13,8 +13,8 @@ public class GetAllRequestTests
 
         // Act & Assert
         Assert.Equal(string.Empty, request.UserId);
-        Assert.Equal(Constant.DefaultPageSize, (int)request.PageSize);
-        Assert.Equal(Constant.DefaultPageNumber, (int)request.PageNumber);
+        Assert.Equal(Constant.DefaultPageSize, request.PageSize);
+        Assert.Equal(Constant.DefaultPageNumber, request.PageNumber);
     }
 
     [Fact]
@@ -36,7 +36,7 @@ public class GetAllRequestTests
     {
         // Arrange
         var request = new GetAll();
-        var pageSize = 50u;
+        var pageSize = 50;
 
         // Act
         request.PageSize = pageSize;
@@ -50,7 +50,7 @@ public class GetAllRequestTests
     {
         // Arrange
         var request = new GetAll();
-        var pageNumber = 2u;
+        var pageNumber = 2;
 
         // Act
         request.PageNumber = pageNumber;

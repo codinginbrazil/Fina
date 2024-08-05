@@ -5,23 +5,27 @@ namespace Core.Responses;
 
 public class Response<TData>
 {
-    private int _code = Constant.DefaultStatusCode;
-
-    public string Message {get; set; } = "success";
+    public int Code { get; private set; } = ResponseConst.SuccessCode;
+    public string Message {get; set; } = ResponseConst.SuccessMessage;
     public TData? Data {get; set; }
-
 
     [JsonConstructor]
     protected Response() { }
 
-    public Response(TData? data, int code = Constant.DefaultStatusCode, string message = "success")
+    public Response(TData data, (int code, string message) response)
     {
-        _code = code;
+        Code = response.code;
+        Message = response.message;
         Data = data;
-        Message = message;
     }
 
+    public Response(TData? data, int code = ResponseConst.SuccessCode, string message = ResponseConst.SuccessMessage)
+    {
+        Code = code;
+        Message = message;
+        Data = data;
+    }
 
     [JsonIgnore]
-    public bool IsSuccess => _code is >= 200 and < 300;
+    public bool IsSuccess => Code is >= 200 and < 300;
 }

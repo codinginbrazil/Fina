@@ -1,7 +1,7 @@
 ﻿using Core.Requests.Categories;
 using System.ComponentModel.DataAnnotations;
 
-namespace UnitTests.Requests.Categories;
+namespace UnitTests.Core.Requests.Categories;
 
 public class UpdateTests
 {

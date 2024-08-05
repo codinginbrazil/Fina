@@ -1,6 +1,6 @@
-﻿using Core.Common;
+﻿using Core.Configurations.DateTimes;
 
-namespace UnitTests.Common;
+namespace UnitTests.Core.Configurations.Datetimes;
 
 public class DateTimeExtensionTests
 {

@@ -1,8 +1,4 @@
-﻿using Core.Interfaces.Repositories.Categories;
-using Core.Models;
-using Core.Responses;
-
-namespace Api.Endpoints.Categories;
+﻿namespace Api.Endpoints.Categories;
 
 public sealed class GetAllEndpoint : IEndpoint
 {
@@ -12,13 +8,13 @@ public sealed class GetAllEndpoint : IEndpoint
             .WithName("Categories: Get All")
             .WithSummary("Recupera todas as categorias")
             .WithDescription("Recupera todas as categorias")
-            .WithOrder(5)
-            .Produces<Response<IEnumerable<Category>?>>();
+            .WithOrder(1)
+            .Produces<Response<IEnumerable<Category>>>();
     }
 
-    private static async Task<IResult> Repository(IQueryRepository queryRepository)
+    private static async Task<IResult> Repository(Core.Interfaces.Repositories.Categories.IQueryRepository queryRepository)
     {
-        var result = await queryRepository.GetAll();
-        return Results.Ok(result);
+        Response<IEnumerable<Category>> response = await queryRepository.GetAll();
+        return CommonResult.Get(response);
     }
 }

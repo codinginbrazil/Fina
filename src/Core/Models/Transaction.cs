@@ -1,4 +1,4 @@
-using Core.Enums;
+using Core.Configurations.Enums;
 
 namespace Core.Models;
 

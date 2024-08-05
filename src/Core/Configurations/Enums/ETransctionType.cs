@@ -1,4 +1,4 @@
-namespace Core.Enums;
+namespace Core.Configurations.Enums;
 
 public enum ETransactionType
 {

@@ -1,6 +1,6 @@
-namespace Core.Common;
+namespace Core.Configurations.DateTimes;
 
-public static class DateTimeExtension
+public static class DayDateTime
 {
     public static DateTime GetFirstDay(this DateTime date, int? year = null, int? month = null)
     {
@@ -9,6 +9,6 @@ public static class DateTimeExtension
 
     public static DateTime GetLastDay(this DateTime date, int? year = null, int? month = null)
     {
-        return new DateTime(year ?? date.Year, month ?? date.Month,1).AddMonths(1).AddDays(-1);
+        return new DateTime(year ?? date.Year, month ?? date.Month, 1).AddMonths(1).AddDays(-1);
     }
 }
